@@ -21,7 +21,7 @@ class TagDetailInfoPresenter : LoadMorePresenter<AndyInfo, FeedModel, TagDetailI
     /**
      * 获取tab栏下信息
      */
-    fun getDetailInfo(url: String) {
+    fun getDetailInfo(url: String?) {
         mBaseModel.getDataInfoFromUrl(url).autoDispose(mScopeProvider).subscribe({
             mView?.showContent()
             mView?.showGetTabInfoSuccess(it)

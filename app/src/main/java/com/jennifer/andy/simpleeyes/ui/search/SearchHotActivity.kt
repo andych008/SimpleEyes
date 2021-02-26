@@ -67,7 +67,7 @@ class SearchHotActivity : BaseActivity<SearchHotView, SearchPresenter>(), Search
         searchComplete.gravity = Gravity.CENTER
         searchComplete.setHintTextColor(resources.getColor(R.color.gray_66A2A2A2))
         searchComplete.textSize = 13f
-        searchComplete.hint = getDecoratedHint(searchComplete.hint, getDrawable(R.drawable.ic_action_search_no_padding), 50)
+        searchComplete.hint = getDecoratedHint(searchComplete.hint, getDrawable(R.drawable.ic_action_search_no_padding)!!, 50)
         //添加搜索监听
         mSearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {

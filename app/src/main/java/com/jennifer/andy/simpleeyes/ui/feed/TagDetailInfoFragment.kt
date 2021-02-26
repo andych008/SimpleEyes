@@ -26,7 +26,7 @@ class TagDetailInfoFragment : BaseFragment<TagDetailInfoView, TagDetailInfoPrese
     private val mRecyclerView: RecyclerView by bindView(R.id.rv_recycler)
     private var mAdapter: BaseDataAdapter? = null
 
-    private lateinit var mApiUrl: String
+    private var mApiUrl: String?= null
 
     companion object {
 

@@ -258,10 +258,10 @@ class IjkVideoViewWrapper @JvmOverloads constructor(context: Context, attrs: Att
      * @param localView 内容布局
      * @param gravity   位置
      */
-    fun createDialogWithView(localView: View?, gravity: Int): Dialog {
+    fun createDialogWithView(localView: View, gravity: Int): Dialog {
         return Dialog(context, R.style.VideoProgress).apply {
             setContentView(localView)
-            window.apply {
+            window!!.apply {
                 addFlags(Window.FEATURE_ACTION_BAR)
                 addFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL)
                 addFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE)

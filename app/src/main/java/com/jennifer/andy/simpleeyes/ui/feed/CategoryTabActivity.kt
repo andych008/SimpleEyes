@@ -107,7 +107,7 @@ class CategoryTabActivity : BaseActivity<CategoryTabView, CategoryTabPresenter>(
         }
         //设置渐变
         val color = ArgbEvaluator().evaluate(titleAlpha, Color.WHITE, Color.BLACK) as Int
-        val wrapDrawable = DrawableCompat.wrap(getDrawable(backResId))
+        val wrapDrawable = DrawableCompat.wrap(getDrawable(backResId)!!)
         wrapDrawable.setTint(color)
         ivBack.setImageDrawable(wrapDrawable)
 
